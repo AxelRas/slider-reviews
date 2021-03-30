@@ -3,51 +3,43 @@ import Reviews from './components/Reviews';
 import data from './reviews.json';
 import $ from 'jquery';
 
-function randomReviewPicker(currentReviewInd) {
-  let randomInd = Math.floor(Math.random()*(data.reviews.length));
-  if(randomInd === currentReviewInd) {
-    return randomReviewPicker(currentReviewInd);
-  } else {
-    return randomInd;
-  }
-}
+
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      currentReview: 3
+      currentReview: 0
     }
 
     this.nextReview = this.nextReview.bind(this);
     this.previousReview = this.previousReview.bind(this);
   }
 
+
+
   nextReview() {
-    let prev = this.state.currentReview;
-
-    // $(".review").animate({height: '1600'});
-
+    
     if(this.state.currentReview === data.reviews.length -1) {
-      this.setState({
-        currentReview: 0
-      });
+    this.setState({
+      currentReview: 0
+    });
     } else {
-        this.setState({
-          currentReview: this.state.currentReview + 1
-        });
+    this.setState({
+      currentReview: this.state.currentReview + 1
+    });
     }
   }
 
-  previousReview() {
+  previousReview() {    
     if(this.state.currentReview === 0) {
       this.setState({
         currentReview: data.reviews.length -1
       });
     } else {
       this.setState({
-        currentReview: this.state.currentReview -1
+        currentReview: this.state.currentReview - 1
       });
     }
   }
@@ -65,7 +57,7 @@ class App extends React.Component {
           </div>
 
           <div className="review-parent">
-            <Reviews data={data.reviews} current={this.state.currentReview} />
+            <Reviews data={data.reviews} current={this.state.currentReview} prev={this.state.prevReview} next={this.state.nextReview} />
           </div>
 
           <div className="arrows">

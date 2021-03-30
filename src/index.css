@@ -18,6 +18,14 @@ html {
     margin-top: 0;
 }
 
+.review-set {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 1500px;
+}
+
 .review {
     display: flex;
     flex-direction: column;
@@ -30,6 +38,7 @@ html {
     min-width: 300px;
     /* box-shadow: 0 5px 10px 0px rgba(20, 20, 20, 0.5); */
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    position: relative;
 }
 
 .review img {
