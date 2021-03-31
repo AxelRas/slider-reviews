@@ -1,3 +1,3 @@
 # Review display with slide animation
 
-Totally scalable. Animation algorithm not optimized; if you click too fast it bugs out.
+Totally scalable. Currently, the review can't be resized; I'll try to figure it out.
