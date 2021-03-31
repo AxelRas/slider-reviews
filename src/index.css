@@ -23,7 +23,9 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /* width: 1500px; */
+  width: 1500px;
+  height: 550px;
+  /* border: 2px solid black; */
 }
 
 .review {
@@ -34,7 +36,7 @@ html {
     /* background-color: rgb(221, 227, 235); */
     margin: 20px;
     height: 600px;
-    max-width: 750px;
+    max-width: 750px; 
     min-width: 300px;
     /* box-shadow: 0 5px 10px 0px rgba(20, 20, 20, 0.5); */
     font-family: 'M PLUS Rounded 1c', sans-serif;
