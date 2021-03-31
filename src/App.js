@@ -30,6 +30,8 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
+    $(".arrows").css({"pointer-events": "none"});
+    setTimeout(() => {$(".arrows").css({"pointer-events": ""})}, 605)
     if(this.state.nextCalled) {
       $(".review").animate({right: "720px"}, 605, function () { $(this).removeAttr('style'); });
       
