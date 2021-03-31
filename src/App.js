@@ -42,8 +42,6 @@ class App extends React.Component {
     } else if(this.state.prevCalled) {
       $(".review").css({"position": "relative", "right": "720px"});
       $(".review").animate({left: "0px"}, 605, function () { $(this).removeAttr('style'); });
-
-      // , function () { $(this).removeAttr('style'); }
       
       setTimeout(() => {
         this.setState({
